@@ -1,0 +1,23 @@
+{% for term, goals in goals_dict.items %}
+<div class="col-md-4">
+    <div class="card mb-4">
+        <div class="card-header">
+            {{ term|title }} Term Goals
+        </div>
+        <ul class="list-group list-group-flush">
+            {% for goal in goals %}
+            <li class="list-group-item d-flex justify-content-between align-items-center goal-item {% if goal.completed %}completed{% else %}uncompleted{% endif %}">
+                <span {% if goal.completed %}class="text-muted"{% endif %}>
+                    {{ goal.description }}
+                </span>
+                <a href="{% url 'toggle_goal_completion' goal.id %}" class="btn btn-sm {% if goal.completed %}btn-success{% else %}btn-outline-secondary{% endif %}">
+                    {% if goal.completed %}✓{% else %}○{% endif %}
+                </a>
+            </li>
+            {% empty %}
+            <li class="list-group-item">No {{ term }} term goals yet.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+{% endfor %}

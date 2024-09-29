@@ -1,0 +1,73 @@
+.big-link {
+    font-size: 1.2rem;
+    width: 100%;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.goal-button {
+    color: #007bff;
+    background-color: #fff;
+    border-color: #007bff;
+}
+
+.goal-button:hover {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.active-goal {
+    color: #fff !important;
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.btn-outline-secondary {
+    border-color: #ced4da;
+    color: #6c757d;
+}
+
+.btn-success {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+.add-new-goal-btn {
+    margin-top: 20px;  /* Adjust this value as needed */
+}
+
+.btn-primary[href*="goal_create"] {
+    margin-top: 20px;  /* Adjust this value as needed */
+}
+
+/* New styles for goal filtering */
+.filter-checkboxes {
+    margin-bottom: 20px;
+}
+
+.form-check-input {
+    margin-right: 5px;
+}
+
+.goal-item {
+    transition: opacity 0.3s ease;
+}
+
+.goal-item.hidden {
+    display: none;
+}
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
